@@ -20,7 +20,8 @@
     "start:p:react": "react-scripts start",
     "build": "run-s build:** -l",
     "start:p:css": "onchange './tailwind.config.js' '<path-to-tailwind-source.css>' -e '<path-to-exclude-output-tailwind.css>' -- npm run build:a:css",
-    "start": "npm-run-all build:a:css -l -p start:p:*"
+    "start": "npm-run-all build:a:css -l -p start:p:*",
+    "deploy": "npm run build && firebase deploy"
   },
   "eslintConfig": {
     "extends": [
